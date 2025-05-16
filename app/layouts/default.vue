@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <AppSidebar v-model:drawer="drawer" />
+    <AppSidebar />
     <v-main>
       <v-container fluid>
         <slot />
@@ -10,8 +10,5 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import AppSidebar from '~/components/sidebar.vue'
-
-const drawer = ref(true)
 </script>
