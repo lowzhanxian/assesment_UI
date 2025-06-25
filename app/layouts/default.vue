@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <AppSidebar />
-    <v-main>
+    <v-main style="background-color: #0E1A1F;">
       <v-container fluid>
         <slot />
       </v-container>
@@ -10,5 +9,5 @@
 </template>
 
 <script setup>
-import AppSidebar from '~/components/sidebar.vue'
+// import AppSidebar from '~/components/sidebar.vue'
 </script>
