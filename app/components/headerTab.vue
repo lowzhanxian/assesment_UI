@@ -1,15 +1,15 @@
 <template>
-    <v-container class="pa-0">
+    <v-container fluid class="pa-5">
         <v-card class="header-card d-flex align-center justify-space-between pa-6" elevation="0" rounded="xl">
             <!-- Logo -->
             <div class="d-flex align-center">
-                <div class="glow-dot mr-3"></div>
-                <span class="text-h5 font-weight-bold text-white">Captivate</span>
+                <img src="/assets/SVG/captivate.svg" alt="Captivate Logo" class="mr-3" height="40" />
+
             </div>
 
             <v-tabs v-model="tab" class="hidden-sm-and-down" align-tabs="center" background-color="transparent"
-                color="white" hide-slider selectedd >
-                <v-tab v-for="item in tabs" :key="item">{{ item }}</v-tab>
+                color="white" hide-slider selected-class="text-white" >
+                <v-tab v-for="item in tabs" class="tab-item" :key="item">{{ item }}</v-tab>
             </v-tabs>
 
             <!-- Mobile Burger -->
@@ -62,8 +62,23 @@ const tabs = ['Features', 'Pricing', 'FAQ']
 </script>
 
 <style scoped>
+.tab-item {
+  color: #ffffff !important;  /* Inactive tabs look dim */
+  transition: 0.2s;
+}
+
+.tab-item:hover {
+  color: #ffffff;
+}
+
+.tab-active {
+  color: #11CCA8 !important; /* Active tab color */
+  font-weight: 600;
+  border-bottom: 2px solid #11CCA8;
+}
+
 .header-card {
-    background: linear-gradient(90deg, #11CCA8, #4AC5DF), #0E1A1F;
+    background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
     background-blend-mode: overlay;
 }
 

@@ -1,10 +1,11 @@
 <template>
-    <HeaderTab />
+  <HeaderTab />
+  <Container1 />
+  <Container2 />
+
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
 
 <script setup lang="ts">
 definePageMeta({
