@@ -174,7 +174,7 @@
 
 
             <v-row class="mt-16 mb-16">
-                <v-col v-for="(plan, index) in pricingPlans" :key="index">
+                <v-col cols="12" md="6" lg="6" sm="12" xs="12" v-for="(plan, index) in pricingPlans" :key="index">
                     <v-card elevation="0" class="pricing-card">
                         <v-card-text class="pa-10 text-left">
                             <h2>{{ plan.title }}</h2>
@@ -325,7 +325,7 @@
                     </v-row>
                 </v-col>
             </v-row>
-            
+
             <v-row class="mt-10 pt-10" justify="space-between" align="center" style="border-top: 1px solid #11CCA8;">
                 <v-col cols="12" md="2" class="d-flex align-center">
                     <v-img src="/assets/SVG/facebook.svg" width="20" height="24" alt="Facebook" />

@@ -5,7 +5,9 @@
 
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
 
 <script setup lang="ts">
 definePageMeta({

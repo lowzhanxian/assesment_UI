@@ -63,7 +63,7 @@ const tabs = ['Features', 'Pricing', 'FAQ']
 
 <style scoped>
 .tab-item {
-  color: #ffffff !important;  /* Inactive tabs look dim */
+  color: #ffffff !important;  
   transition: 0.2s;
 }
 
