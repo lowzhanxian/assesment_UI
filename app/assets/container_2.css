@@ -65,7 +65,8 @@ h4 {
 
 .card-3,
 .card-4,
-.card-5 {
+.card-5,
+.card-6 {
     background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
     background-blend-mode: overlay;
     border-radius: 20px;
@@ -154,4 +155,17 @@ h4 {
 .btn-get-started:hover{
     background-color: #11CCA8;
     color: #0E1A1F;
+}
+
+.custom-expansion-panel {
+  background-color: #0E1A1F !important;
+  color: white;
+  border: 1px solid #ffff;
+  border-top: none;
+  border-left: none;
+  border-right: none; 
+}
+
+.partner-logo{
+    opacity: 0.5;
 }

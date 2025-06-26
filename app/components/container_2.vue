@@ -213,18 +213,132 @@
                 <v-col cols="12">
                     <h1 class="text">Frequent questions</h1>
                 </v-col>
-                <v-col cols="8">
-                    <v-row justify="end">
-                        <v-expansion-panels style="width: 100%;" class="expansion-panels">
-                            <v-expansion-panel title="Is Captivate easy to use for a beginner?"
-                                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima">
-                            </v-expansion-panel>
+                <v-col cols="12" class="justify-end">
+                    <v-row>
+                        <v-expansion-panels style="width: 100%;" class="expansion-panels pa-5">
+                            <v-expansion-panel v-for="(faq, index) in faqItems" :key="index"
+                                class="custom-expansion-panel pa-2" :title="faq.title" :text="faq.text" />
                         </v-expansion-panels>
                     </v-row>
                 </v-col>
-
-
             </v-row>
+            <v-row class="mt-16 mb-16">
+                <v-col cols="12">
+                    <div class="img-fluid" align="center">
+                        <img class="partner-logo" src="/assets/SVG/apertureLogo.svg" alt="">
+                    </div>
+                </v-col>
+                <v-row justify="center">
+                    <v-col cols="12" md="8" class="text-center">
+                        <h4 class="font-weight-regular">
+                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Turpis mauris, libero tellus nec tortor libero arcu, sapien.
+                            Venenatis sit morbi ac amet amet.”
+                        </h4>
+                    </v-col>
+                </v-row>
+                <v-row justify="center">
+                    <v-col cols="12" md="4" class="text-center">
+                        <span style="color: #4AC5DF;">Mikayla Smith,Marketing Director</span>
+                    </v-col>
+                </v-row>
+            </v-row>
+
+            <v-row justify="center" align="center" class="mt-16 mb-16 pa-16 card-6 text-center">
+                <v-col cols="12">
+                    <h1 class="font-weight-bold text-white">Get started today</h1>
+                </v-col>
+                <v-col cols="12">
+                    <p class="text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                        Aenean et netus enim pellentesque pharetra semper at faucibus neque ac suspendisse.
+                    </p>
+                </v-col>
+                <v-col cols="12" md="6" class="mt-10">
+                    <div class="d-flex align-center justify-space-between"
+                        style="overflow: hidden; border: 1px solid #11CCA8; border-radius: 30px; padding-bottom: 10px; background-color: transparent;">
+                        <v-text-field v-if="showInput" v-model="email" placeholder="Email address" hide-details
+                            variant="plain" density="comfortable" class="pl-5"
+                            style="flex: 1; color: white;"></v-text-field>
+
+                        <v-btn
+                            :style="{ backgroundColor: '#11CCA8', color: 'black', height: '40px', minWidth: '100px' }"
+                            class="rounded-pill mt-2 ml-2" @click="showInput = true">
+                            Sign up
+                        </v-btn>
+                    </div>
+                </v-col>
+            </v-row>
+            <v-row class="mt-16">
+                <v-col cols="12">
+                    <div class="d-flex align-center">
+                        <img src="/assets/SVG/captivate.svg" alt="Captivate Logo" class="mr-3" height="40" />
+
+                    </div>
+                </v-col>
+                <v-col class="mt-16" cols="12" md="6" lg="6" sm="12" xs="12">
+                    <span class="landing-page-text">Landing Pages</span>
+                    <v-row class="mt-5 text-white">
+                        <v-col>
+                            <a href="#">Landing page V1</a>
+                        </v-col>
+                        <v-col>
+                            <a href="#">Landing page V4</a>
+                        </v-col>
+                    </v-row>
+                    <v-row class="text-white">
+                        <v-col>
+                            <a href="#">Landing page V2</a>
+                        </v-col>
+                        <v-col>
+                            <a href="#">Landing page V5</a>
+                        </v-col>
+                    </v-row>
+                    <v-row class="text-white">
+                        <v-col>
+                            <a href="#">Landing page V3</a>
+                        </v-col>
+                    </v-row>
+                </v-col>
+                <v-col class="mt-16" cols="12" md="6" lg="6" sm="12" xs="12">
+                    <span class="landing-page-text">Utility Pages</span>
+                    <v-row class="mt-5 text-white">
+                        <v-col>
+                            <a href="#">Login</a>
+                        </v-col>
+                        <v-col>
+                            <a href="#">Password</a>
+                        </v-col>
+                    </v-row>
+                    <v-row class="text-white">
+                        <v-col>
+                            <a href="#">Sign Up</a>
+                        </v-col>
+                        <v-col>
+                            <a href="#">404</a>
+                        </v-col>
+                    </v-row>
+                    <v-row class="text-white">
+                        <v-col>
+                            <a href="#">Privacy</a>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+            
+            <v-row class="mt-10 pt-10" justify="space-between" align="center" style="border-top: 1px solid #11CCA8;">
+                <v-col cols="12" md="2" class="d-flex align-center">
+                    <v-img src="/assets/SVG/facebook.svg" width="20" height="24" alt="Facebook" />
+                    <v-img src="/assets/SVG/twitter.svg" width="20" height="24" alt="Twitter" />
+                    <v-img src="/assets/SVG/linkedin.svg" width="24" height="24" alt="LinkedIn" />
+                    <v-icon size="26" color="white">mdi-instagram</v-icon>
+                </v-col>
+
+                <v-col cols="12" md="6" class="text-right">
+                    <span class="text-white">© 2025. All Rights Reserved.</span>
+                </v-col>
+            </v-row>
+
 
 
         </v-container>
@@ -237,6 +351,10 @@ import presentIcon from '@/assets/svg/present.svg'
 import earnIcon from '@/assets/svg/earn.svg'
 import webbIcon from '@/assets/svg/webb.svg'
 import caseIcon from '@/assets/svg/case.svg'
+// import addIcon from '@/assets/svg/addicon.svg'
+
+const showInput = ref(false)
+const email = ref('')
 
 const items = [
     { icon: magnetIcon, label: 'Pitch Decks' },
@@ -274,8 +392,48 @@ const pricingPlans = [
   }
 ]
 
+const faqItems = [
+  {
+    title: 'Is Captivate easy to use for a beginner?',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  {
+    title: 'How is it different than PowerPoint?',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  {
+    title: 'How much does it cost to use Captivate?',
+    text: 'Lorem ipsum dolor sit amet .',
+  },
+  {
+    title: 'Is Captivate right for my team?',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+  {
+    title: 'How do I add members to our plan?',
+    text: 'Lorem ipsum dolor sit amet consectetur .',
+  },
+  {
+    title: 'How do I contact support?',
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  },
+]
+
+
 </script>
 
 <style scoped>
 @import '@/assets/container_2.css';
+.landing-page-text {
+  background: linear-gradient(360deg, #11CCA8, #4AC5DF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
 </style>
