@@ -110,7 +110,7 @@ h1 {
     color: white;
     font-weight: 600;
     padding: 10px 24px;
-    border-radius: 999px;
+    /* border-radius: 999px; */
     text-transform: none;
     background: linear-gradient(360deg, #11CCA8 ), #0E1A1F;
     border: 1px solid transparent;

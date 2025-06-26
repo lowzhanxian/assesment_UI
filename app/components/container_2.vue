@@ -55,7 +55,7 @@
                     </div>
                 </v-col>
             </v-row>
-            <v-row class="mt-16">
+            <v-row class="mt-16 mb-16">
                 <v-col col="12" md="6" lg="6" sm="12" xs="12" class="card-4 mt-10 mr-15" style="position: relative;">
                     <v-img src="/assets/IMG/video.png" class="video-img" cover height="250px" width="95%"></v-img>
                     <div class="card-content pa-6">
@@ -72,102 +72,210 @@
                 </v-col>
             </v-row>
 
-            <!-- later do -->
-            <v-row class="mt-10" justify="center">
-                <v-col v-for="(item, index) in items" :key="index" cols="12" sm="6" md="4" lg="2">
-                    <div class="border-card d-flex flex-column align-center pa-4">
-                        <img :src="item.icon" width="40" height="40" alt="icon" />
-                        <span class="mt-4 text-white">{{ item.label }}</span>
+            <div class="scroll-wrapper mt-16">
+                <div class="scroll-track">
+                    <div v-for="(item, index) in [...items , ...items]" :key="index" class="border-card-item">
+                        <img :src="item.icon" width="30" height="30" alt="icon" />
+                        <span class="ml-3 text-white">{{ item.label }}</span>
                     </div>
-                </v-col>
-            </v-row>
-
-            <v-row>
+                </div>
+            </div>
+            <v-row class="mt-16 mb-16">
                 <v-col>
-
+                    <h2>The perfect </h2>
+                    <h2 class="block-down">presentation</h2>
+                    <p class="mt-2 text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <span class="block-down mt-1">Posuere aliquam lectus duis feugiat maecenas penatibus.</span>
+                    </p>
+                    <v-row class="mt-5">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor sit amet</p>
+                        </v-col>
+                    </v-row>
+                    <v-row class="tick-details">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor</p>
+                        </v-col>
+                    </v-row>
+                    <v-row class="tick-details">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor sit </p>
+                        </v-col>
+                    </v-row>
                 </v-col>
-                <v-col></v-col>
+                <v-col>
+                    <v-img src="/assets/IMG/individual.png"></v-img>
+                </v-col>
+            </v-row>
+
+            <v-row class="mt-16">
+                <v-col>
+                    <v-img src="/assets/IMG/teamwork.png"></v-img>
+                </v-col>
+                <v-col class="ml-16 mt-5">
+                    <h2>All-in-one</h2>
+                    <h2 class="block-down">platform</h2>
+                    <p class="mt-2 text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <span class="block-down mt-1">Posuere aliquam lectus duis feugiat maecenas penatibus.</span>
+                    </p>
+                    <v-row class="mt-5">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor sit amet</p>
+                        </v-col>
+                    </v-row>
+                    <v-row class="tick-details">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor</p>
+                        </v-col>
+                    </v-row>
+                    <v-row class="tick-details">
+                        <v-col col="12" md="1">
+                            <v-img width="20px" class="mt-5" src="/assets/SVG/tickIcon.svg"></v-img>
+                        </v-col>
+                        <v-col col="12" md="11">
+                            <p class="mt-5 text-white">Lorem ipsum dolor sit </p>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+
+            <v-container>
+                <v-row class="mt-10">
+                    <v-col cols="12" md="6" lg="6" sm="12" xs="12">
+                        <h1 class="ml-10 text-center">Pricing</h1>
+                    </v-col>
+                    <v-col align="center" cols="12" md="6" lg="6" sm="12" xs="12">
+                        <p class="feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor in laoreet justo lectus a
+                            eget
+                            vitae.
+                            Tellus id pretium.
+                        </p>
+                    </v-col>
+                </v-row>
+            </v-container>
+
+
+            <v-row class="mt-16 mb-16">
+                <v-col v-for="(plan, index) in pricingPlans" :key="index">
+                    <v-card elevation="0" class="pricing-card">
+                        <v-card-text class="pa-10 text-left">
+                            <h2>{{ plan.title }}</h2>
+                            <div class="d-flex align-center">
+                                <h3 class="pricing-text mt-5 mr-2">{{ plan.price }}</h3>
+                                <span class="text-white mt-5">/MONTH</span>
+                            </div>
+                            <p class="text-white mt-2">{{ plan.description1 }}</p>
+                            <p class="text-white">{{ plan.description2 }}</p>
+
+                            <h4 class="mt-5 mb-5">WHAT'S INCLUDED</h4>
+                            <div v-for="(feature, i) in plan.features" :key="i">
+                                <v-row class="tick-details">
+                                    <v-col cols="12" md="1">
+                                        <v-img width="20px" class="mt-5"
+                                            :style="{ opacity: typeof feature === 'object' && feature.disabled ? 0.5 : 1 }"
+                                            src="/assets/SVG/tickIcon.svg"></v-img>
+                                    </v-col>
+                                    <v-col cols="12" md="11">
+                                        <p class="mt-5 text-white">
+                                            {{ typeof feature === 'string' ? feature : feature.text }}
+                                        </p>
+                                    </v-col>
+                                </v-row>
+                            </div>
+
+                            <v-row class="mt-10 ma-5 d-flex flex-column justify-center">
+                                <v-btn class=" btn-get-started">Get Started</v-btn>
+                            </v-row>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
+
+            <v-row class="mt-16">
+                <v-col cols="12">
+                    <h1 class="text">Frequent questions</h1>
+                </v-col>
+                <v-col cols="8">
+                    <v-row justify="end">
+                        <v-expansion-panels style="width: 100%;" class="expansion-panels">
+                            <v-expansion-panel title="Is Captivate easy to use for a beginner?"
+                                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima">
+                            </v-expansion-panel>
+                        </v-expansion-panels>
+                    </v-row>
+                </v-col>
+
 
             </v-row>
+
 
         </v-container>
     </div>
 </template>
 <script setup>
+import magnetIcon from '@/assets/svg/magnet.svg'
+import bankIcon from '@/assets/svg/bank.svg'
+import presentIcon from '@/assets/svg/present.svg'
+import earnIcon from '@/assets/svg/earn.svg'
+import webbIcon from '@/assets/svg/webb.svg'
+import caseIcon from '@/assets/svg/case.svg'
+
 const items = [
-  { icon: '/svg/pitchDecks.svg', label: 'Pitch Decks' },
-  { icon: '/svg/financial.svg', label: 'Financial Reports' },
-  { icon: '/svg/presentation.svg', label: 'Presentation Decks' },
-  { icon: '/svg/earning.svg', label: 'Earnings' },
-  { icon: '/svg/webinar.svg', label: 'Webinars' },
-  { icon: '/svg/staff.svg', label: 'Staff Training' },
+    { icon: magnetIcon, label: 'Pitch Decks' },
+    { icon: bankIcon, label: 'Financial Reports' },
+    { icon: presentIcon, label: 'Presentation Decks' },
+    { icon: earnIcon, label: 'Earnings' },
+    { icon: webbIcon, label: 'Webinars' },
+    { icon: caseIcon, label: 'Staff Training' },
 ]
+
+const pricingPlans = [
+  {
+    title: 'Starter',
+    price: '$24',
+    description1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium',
+    description2: 'orci penatibus sed donec consquet',
+    features: [
+      'Lorem ipsum dolor sit amet consectetur',
+      'Lorem ipsum dolor sit amet',
+      'Lorem ipsum dolor sit amet consecturer',
+      { text: 'Lorem ipsum dolor sit', disabled: true }
+    ]
+  },
+  {
+    title: 'Business',
+    price: '$72',
+    description1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium',
+    description2: 'orci penatibus sed donec consquet',
+    features: [
+      'Lorem ipsum dolor sit amet consectetur',
+      'Lorem ipsum dolor sit amet',
+      'Lorem ipsum dolor sit amet consecturer',
+      { text: 'Lorem ipsum dolor sit', disabled: false }
+    ]
+  }
+]
+
 </script>
 
 <style scoped>
-.video-img {
-  position: absolute;
-  top: 0;
-  right: 0px;
-  /* width: 90%; */
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  object-fit: cover;
-  z-index: 1;
-}
-.card-content {
-  position: relative;
-  z-index: 2;
-  margin-top: 250px; 
-}
-h1 {
-    font-size: 48px;
-    color: #ffffff;
-}
-
-h2 {
-    font-size: 36px;
-    color: #ffffff;
-}
-
-.feature-text {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 500px;
-    color: #ffffff;
-}
-
-.first-card {
-    background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
-    background-blend-mode: overlay;
-    border-radius: 40px;
-}
-.second-card{
-    background: linear-gradient(360deg, #4AC5DF , #11CCA8 ), #0E1A1F;
-    background-blend-mode: overlay;
-    border-radius: 40px;
-}
-.card-3, .card-4 ,.card-5{
-    background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
-    background-blend-mode: overlay;
-    border-radius: 40px;
-}
-.text-all-in {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 8px 10px;
-    background-color: #11CCA8;
-    letter-spacing: 2px;
-}
-.border-card {
-  border: 1px solid #11CCA8;
-  border-radius: 12px;
-  background-color: #0E1A1F;
-  transition: 0.3s ease;
-}
-.border-card:hover {
-  background-color: rgba(17, 204, 168, 0.1);
-  transform: translateY(-4px);
-}
-
+@import '@/assets/container_2.css';
 </style>

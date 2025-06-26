@@ -1,0 +1,157 @@
+.block-down {
+  display: block;
+}
+
+.tick-details{
+    margin-top: -30px;
+}
+.video-img {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    /* width: 90%; */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 250px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ffffff;
+}
+.block-down{
+    margin-top: -10px;
+}
+h2 {
+    font-size: 36px;
+    color: #ffffff;
+}
+h3 {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+h4 {
+    font-size: 20px;
+    word-spacing: 5px;
+    color: #ffffff;
+}
+
+.feature-text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.first-card {
+    background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
+    background-blend-mode: overlay;
+    border-radius: 20px;
+}
+
+.second-card {
+    background: linear-gradient(360deg, #4AC5DF, #11CCA8), #0E1A1F;
+    background-blend-mode: overlay;
+    border-radius: 20px;
+}
+
+.card-3,
+.card-4,
+.card-5 {
+    background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
+    background-blend-mode: overlay;
+    border-radius: 20px;
+}
+
+.text-all-in {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background-color: #11CCA8;
+    letter-spacing: 2px;
+}
+
+.border-card {
+    border: 1px solid #11CCA8;
+    border-radius: 12px;
+    background-color: #0E1A1F;
+    transition: 0.3s ease;
+}
+
+.border-card:hover {
+    background-color: #0E1A1F;
+    transform: translateY(-4px);
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+}
+
+.scroll-track {
+  display: inline-flex;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.border-card-item {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #11CCA8;
+  border-radius: 12px;
+  background-color: #0E1A1F;
+  color: white;
+  padding: 8px 16px;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.pricing-card {
+  background: linear-gradient(360deg, #11CCA8, #4AC5DF), #0E1A1F;
+  background-blend-mode: overlay;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  background: linear-gradient(360deg, #0E1A1F, #0E1A1F);
+  border: 1px solid #11CCA8;
+}
+
+.pricing-text{
+    color:#11CCA8
+}
+
+.btn-get-started{
+    background-color: #0E1A1F;
+    color: #11CCA8;
+    border: 1px solid #11CCA8;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.btn-get-started:hover{
+    background-color: #11CCA8;
+    color: #0E1A1F;
+}
