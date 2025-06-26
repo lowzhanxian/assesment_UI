@@ -345,12 +345,12 @@
     </div>
 </template>
 <script setup>
-import magnetIcon from '@/assets/svg/magnet.svg'
-import bankIcon from '@/assets/svg/bank.svg'
-import presentIcon from '@/assets/svg/present.svg'
-import earnIcon from '@/assets/svg/earn.svg'
-import webbIcon from '@/assets/svg/webb.svg'
-import caseIcon from '@/assets/svg/case.svg'
+import magnetIcon from '@/assets/SVG/magnet.svg'
+import bankIcon from '@/assets/SVG/bank.svg'
+import presentIcon from '@/assets/SVG/present.svg'
+import earnIcon from '@/assets/SVG/earn.svg'
+import webbIcon from '@/assets/SVG/webb.svg'
+import caseIcon from '@/assets/SVG/case.svg'
 // import addIcon from '@/assets/svg/addicon.svg'
 
 const showInput = ref(false)
