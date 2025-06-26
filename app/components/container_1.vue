@@ -106,18 +106,16 @@ h1 {
     margin-bottom: 32px;
     max-width: 500px;
 }
-
 .text-btn {
-  color: white;
-  font-weight: 600;
-  padding: 10px 24px;
-  border-radius: 999px;
-  text-transform: none;
-  background: linear-gradient(to right, #11CCA8, #24CABB, #4AC5DF);
-  border: 1px solid transparent;
-  transition: 0.3s ease;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 999px;
+    text-transform: none;
+    background: linear-gradient(360deg, #11CCA8 ), #0E1A1F;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
 }
-
 
 .img-fluid {
     max-width: 100%;
